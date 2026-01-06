@@ -7,7 +7,7 @@ model = joblib.load('model_churn.pkl')
 scaler = joblib.load('scaler.pkl')
 
 st.title("Aplikasi Prediksi Churn Pelanggan")
-st.write("Masukkan data pelanggan di bawah ini untuk melihat potensi Churn.") [cite: 97]
+st.write("Masukkan data pelanggan di bawah ini untuk melihat potensi Churn.") # [cite: 97]
 
 # Form Input Fitur (Contoh beberapa fitur utama) [cite: 94]
 tenure = st.number_input("Tenure (Bulan)", min_value=0, max_value=100, value=1)
@@ -28,4 +28,5 @@ if st.button("Prediksi Sekarang"):
     if prediction[0] == 1:
         st.error("Hasil: Pelanggan ini berpotensi CHURN (Berhenti Berlangganan)")
     else:
+
         st.success("Hasil: Pelanggan ini berpotensi TETAP BERLANGGANAN")
